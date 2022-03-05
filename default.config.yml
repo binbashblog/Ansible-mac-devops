@@ -1,0 +1,128 @@
+---
+configure_terminal: yes
+configure_osx: yes
+configure_dotfiles: yes
+
+dotfiles_repo: https://github.com/binbashblog/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/dotfiles
+dotfiles_files:
+  - .aliases
+  - .zshrc
+  - .gitconfig
+  - .gitignore_global
+  - .vimrc
+  - .vim
+  - .osx
+  - .functions
+
+homebrew_installed_packages:
+# Dev
+  # *** Python ***
+  - python
+  - python3
+  - pipenv # Python dependency management tool
+  # Shell Utilities
+  - mas # Mac App Store command-line interface
+  - git
+  - httpie # User-friendly cURL replacement (command-line HTTP client)
+  - jq # Lightweight and flexible command-line JSON processor
+  - sqlite # Command-line interface for SQLite
+  - coreutils # GNU File, Shell, and Text utilities
+  - tree # Display directories as trees
+  - csshx # Cluster ssh tool for Terminal.app
+  - fzf # Command-line fuzzy finder written in Go
+  - whatmask # Network settings helper
+  - wget # Internet file retriever
+  - nmap # Port scanning utility
+  - ssh-copy-id # Add a public key to a remote machine's authorized_keys file
+  - openssl # OpenSSL GIO module for glib
+  - pandoc # Swiss-army knife of markup format conversion
+  - telnet # User interface to the TELNET protocol
+  - sshuttle # Proxy server that works as a poor man's VPN
+  - tldr # Simplified and community-driven man pages
+  - tmux # Terminal multiplexer
+  - bat # Clone of cat(1) with syntax highlighting and Git integration
+  - awscli # AWS CLI
+  - ripgrep # Search tool like grep but much faster
+  - kubectl
+  - terraform@0.11
+
+
+homebrew_taps:
+  - homebrew/core
+  - adoptopenjdk/openjdk
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - kite
+  - slack # Team communication and collaboration software
+  - notion
+# Browsers
+  - brave-browser
+# Utilities
+  - vlc # VLC media player
+  - kap # Open-source screen recorder built with web technology
+# DevOps tools
+  - docker
+  - vagrant
+  - virtualbox
+# Dev environment
+  - sourcetree # Graphical client for Git version control
+  - visual-studio-code
+  - open-in-code # Finder toolbar app to open current folder in Visual Studio Code
+# Quick look plugins
+  - qlcolorcode # Quick Look plug-in that renders source code with syntax highlighting
+  - qlstephen # A QuickLook plugin that lets you view plain text files without a file extension
+  - qlmarkdown
+  - quicklook-json
+  - quicklook-csv
+  - go2shell # Opens a terminal window to the current directory in Finder.
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_app_ids:
+  - 937984704 # Amphetamine
+  - 1199502670 # Teampaper Snap
+  - 425955336 # Skitch
+  - 472226235 # LanScan
+  - 973213640 # MSG Viewer for Outlook
+  - 1091189122 # Bear
+  - 568494494 # Pocket
+  - 409201541 # Pages
+  - 409183694 # Keynote
+  - 409203825 # Numbers
+  - 1295203466 # Microsoft Remote Desktop
+  - 513610341 # com.peacockmedia.integrity
+  - 1176895641 # Spark Email App by Readdle
+  - 1333542190 # 1password
+  - 803453959 # Slack
+  - 1510445899 # Meeter
+  - 1509590766 # MuteKey
+
+vscode_packages:
+  - vscoss.vscode-ansible # Ansible 
+  - HookyQR.beautify # Beautify code
+  - CoenraadS.bracket-pair-colorizer-2 # Colorizing matching brackets
+  - eamodio.gitlens # Supercharge Git 
+  - fatihacet.gitlab-workflow # Gitlab workflow integration
+  - akamud.vscode-theme-onedark # Theme
+  - file-icons.file-icons #Icons
+  - bmaupin.copy-without-formatting # Copy without formatting
+  - EditorConfig.EditorConfig # EditorConfig Support
+  - esbenp.prettier-vscode # Prettier 
+  - formulahendry.code-runner # Run code from vscode
+  - Gruntfuggly.todo-tree # Show Todo Fixme 
+  - mauve.terraform # Terraform
+  - mitchdenny.ecdc # Encode and decode text selections
+  - ms-azuretools.vscode-docker # Linting for Dockerfile and docker-compose files
+  - ms-kubernetes-tools.vscode-kubernetes-tools # Kubernetes
+  - ms-vsliveshare.vsliveshare # Real-time collaborative development
+  - msjsdiag.debugger-for-chrome # Debugger for Chrome
+  - nhoizey.gremlins # Reveals some characters that can be harmful because they are invisible or looking like legitimate ones
+  - quicktype.quicktype # Copy JSON, paste as Go, TypeScript, C#, C++ and more
+  - redhat.vscode-yaml # Yaml language support
+  - spywhere.guides # Guide lines
+  - vilicvane.sensitive-replace # Sensitive replace
+  - VisualStudioExptTeam.vscodeintellicode # AI-assisted development
+  - wayou.vscode-todo-highlight # highlight TODOs, FIXMEs, and any keywords, annotation
+  - yzane.markdown-pdf # Convert Markdown to PDF

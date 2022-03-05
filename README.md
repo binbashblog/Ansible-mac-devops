@@ -6,9 +6,7 @@ This ansible playbook installs and sets up all the tools I need for my DevOps en
 
 ## 🚥 Installation 
 
-1) Clone or download this repository on your mac.
-
-2) Execute [install.sh](install.sh)
+Download and Execute [Install.sh](Install.sh) or clone this repository
 
 _Note: If some Homebrew commands fail, you might need to agree to XCode's license or fix some other Brew issue. Run brew doctor to see if this is the case._
 
@@ -18,13 +16,16 @@ _Note3: Of course you can use yours changing `dotfiles_repo` variable in `defaul
 
 ## 🚀 Usage
 
+Just Download and Execute [Install.sh](Install.sh) 
+
+OR clone this repository and
 Just run the following command at the root of this project and enter your account password when prompted.
 
 ```sh
 ansible-playbook setup-my-mac.yml -i inventory -K
 ```
 
-You can customize setup editing `default.config.yml` config file.
+You can customize the setup by editing the `default.config.yml` config file.
 
 
 ## ✨What this playbook does
@@ -41,7 +42,7 @@ The complete list of software installed is in `default.config.yml`, but in summa
 
 - Configure terminal
 
-    Install iTerm2 (Solarized Dark theme, font-inconsolata)
+    Install vscode with extensions
     Install Zsh and configure options with oh-my-zsh
 
 - Configure Mac OS 
@@ -51,12 +52,6 @@ The complete list of software installed is in `default.config.yml`, but in summa
     Finder: show status bar
     Save screenshots in PNG format
     Save screenshots to the Desktop/Screenshots folder
-
-## Future Improvements
-
-Configure iTerm2 Profile with Solarized theme.
-Add config for sync settings VScode and Brave
-Configure VPN
 
 ## Testing the Playbook
 
