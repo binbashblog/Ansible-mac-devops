@@ -24,7 +24,7 @@ homebrew_installed_packages:
   - python3
   - pipenv # Python dependency management tool
   # Shell Utilities
-  - mas # Mac App Store command-line interface
+  - mas # Mac App Store command-line interface # Commented out as not supported in 12.2.1
   - git
   - httpie # User-friendly cURL replacement (command-line HTTP client)
   - jq # Lightweight and flexible command-line JSON processor
@@ -81,24 +81,24 @@ homebrew_cask_apps:
   - go2shell # Opens a terminal window to the current directory in Finder.
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_app_ids:
-  - 937984704 # Amphetamine
-  - 1199502670 # Teampaper Snap
-  - 425955336 # Skitch
-  - 472226235 # LanScan
-  - 973213640 # MSG Viewer for Outlook
-  - 1091189122 # Bear
-  - 568494494 # Pocket
-  - 409201541 # Pages
-  - 409183694 # Keynote
-  - 409203825 # Numbers
-  - 1295203466 # Microsoft Remote Desktop
-  - 513610341 # com.peacockmedia.integrity
-  - 1176895641 # Spark Email App by Readdle
-  - 1333542190 # 1password
-  - 803453959 # Slack
-  - 1510445899 # Meeter
-  - 1509590766 # MuteKey
+# mas_installed_app_ids: # commented out as not working on 12.2.1
+#  - 937984704 # Amphetamine
+#  - 1199502670 # Teampaper Snap
+#  - 425955336 # Skitch
+#  - 472226235 # LanScan
+#  - 973213640 # MSG Viewer for Outlook
+#  - 1091189122 # Bear
+#  - 568494494 # Pocket
+#  - 409201541 # Pages
+#  - 409183694 # Keynote
+#  - 409203825 # Numbers
+#  - 1295203466 # Microsoft Remote Desktop
+#  - 513610341 # com.peacockmedia.integrity
+#  - 1176895641 # Spark Email App by Readdle
+#  - 1333542190 # 1password
+#  - 803453959 # Slack
+#  - 1510445899 # Meeter
+#  - 1509590766 # MuteKey
 
 vscode_packages:
   - vscoss.vscode-ansible # Ansible 
