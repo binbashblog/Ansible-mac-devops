@@ -66,7 +66,7 @@ homebrew_cask_apps:
 # DevOps tools
   - docker
   - vagrant
-  - virtualbox
+ # - virtualbox # not supported on M1
 # Dev environment
   - sourcetree # Graphical client for Git version control
   - visual-studio-code
