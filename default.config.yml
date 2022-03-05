@@ -46,7 +46,7 @@ homebrew_installed_packages:
   - awscli # AWS CLI
   - ripgrep # Search tool like grep but much faster
   - kubectl
-  - terraform@0.11
+  - terraform # Apple M1 not supported on old versions of Terraform
 
 
 homebrew_taps:
