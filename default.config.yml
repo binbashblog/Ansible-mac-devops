@@ -2,6 +2,7 @@
 configure_terminal: yes
 configure_osx: yes
 configure_dotfiles: yes
+configure_vscode: yes
 
 dotfiles_repo: https://github.com/binbashblog/dotfiles.git
 dotfiles_repo_accept_hostkey: yes
