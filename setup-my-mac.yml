@@ -8,6 +8,7 @@
   vars_prompt:
     - name: "mas_email"
       prompt: "Enter your AppleID Email:"
+      private: no
     - name: "mas_password"
       prompt: "Enter your AppleID Password:"
       private: yes
