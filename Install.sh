@@ -27,6 +27,9 @@ LINE='alias ll="ls -lGaf"'
 FILE='~/.zshrc'
 grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
+# Install GNU Command Line Tools
+brew install coreutils
+
 # Install PIP
 # curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 # sudo python get-pip.py
