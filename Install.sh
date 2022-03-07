@@ -4,20 +4,28 @@ xcode-select --install
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Add homebrew to path (M1 fix)
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc
+# Add homebrew to path (M1 fix) if not exist
 eval "$(/opt/homebrew/bin/brew shellenv)"
+LINE='eval "$(/opt/homebrew/bin/brew shellenv)"'
+FILE='~/.zshrc'
+grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
+# Run brew doctor to display any problems with brew on screen
 brew doctor
 
-# Install python3
+# Install python3 and add to path if not exist
 brew install python
-echo 'export PATH="/usr/local/opt/python/libexec/bin:$PATH"' >> ~/.zshrc
+LINE='export PATH="/usr/local/opt/python/libexec/bin:$PATH"'
+FILE='~/.zshrc'
+grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
+
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-# Set Alias ll to 'ls -lGaf'
+# Set Alias ll to 'ls -lGaf' if not exist
 alias ll="ls -lGaf"
-echo 'alias ll="ls -lGaf"' >> ~/.zshrc
+LINE='alias ll="ls -lGaf"'
+FILE='~/.zshrc'
+grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
 # Install PIP
 # curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
