@@ -1,7 +1,7 @@
 ---
 configure_terminal: yes
 configure_osx: yes
-configure_dotfiles: yes
+#configure_dotfiles: yes
 configure_vscode: yes
 
 dotfiles_repo: https://github.com/binbashblog/dotfiles.git
@@ -48,6 +48,7 @@ homebrew_installed_packages:
   - ripgrep # Search tool like grep but much faster
   - kubectl
   - terraform # Apple M1 not supported on old versions of Terraform
+  - vault
 
 
 homebrew_taps:
