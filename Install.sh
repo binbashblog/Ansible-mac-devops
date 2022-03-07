@@ -6,7 +6,7 @@ xcode-select --install
 
 # Add homebrew to path (M1 fix) if not exist
 eval "$(/opt/homebrew/bin/brew shellenv)"
-LINE='eval "$(/opt/homebrew/bin/brew shellenv)"'
+LINE='eval \"\$(/opt/homebrew/bin/brew shellenv)\"'
 FILE='~/.zshrc'
 grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
@@ -15,7 +15,7 @@ brew doctor
 
 # Install python3 and add to path if not exist
 brew install python
-LINE='export PATH="/usr/local/opt/python/libexec/bin:$PATH"'
+LINE='export PATH=\"/usr/local/opt/python/libexec/bin:\$PATH\"'
 FILE='~/.zshrc'
 grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
@@ -23,7 +23,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 # Set Alias ll to 'ls -lGaf' if not exist
 alias ll="ls -lGaf"
-LINE='alias ll="ls -lGaf"'
+LINE='alias ll=\"ls -lGaf\"'
 FILE='~/.zshrc'
 grep -qF -- "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
